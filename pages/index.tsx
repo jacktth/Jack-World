@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import About from "./about";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{' '}
+              By{" "}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
@@ -39,15 +40,27 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+        <div >
+          <div
+  
+          >
+            <Image
+              src="/me.jpg"
+              alt="Next.js Logo"
+              width={200}
+              height={160}
+              sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
+              style={{
+                height: "100%",
+                width: "100%",
+                animation: "3s ease-in 1s infinite reverse both running slidein",
+              }}
+              priority
+            />
+          </div>
+
           <div className={styles.thirteen}>
             <Image
               src="/thirteen.svg"
@@ -119,5 +132,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
+  );
 }
