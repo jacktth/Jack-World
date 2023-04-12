@@ -8,7 +8,11 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+  theme: { screens: {
+    'xm': {'max': '639px'},
+    'sm': {'min': '640px', },
+ 
+  },
     extend: {},
   },
   plugins: [],
