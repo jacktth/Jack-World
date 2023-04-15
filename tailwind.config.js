@@ -13,7 +13,9 @@ module.exports = {
     'sm': {'min': '640px', },
  
   },
-    extend: {},
+    extend: {backgroundImage: {
+      'magic': "linear-gradient(132deg, #5ddcff, #3c67e3 43%, #4e00c2)",
+   },},
   },
   plugins: [],
 }
