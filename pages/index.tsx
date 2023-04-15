@@ -98,23 +98,20 @@ export default function Home() {
           <p>React, Typescript, Nestjs, Supabase</p>
         </div>
         <img src="/stock-chart.jpg" alt="" />
-
       </div>
       <h3>About me:</h3>
-      <div className="grid grid-cols-2 ">
-        <div className="border-2 border-orange-400">ddddddddddddddd</div>
-        <div className="border-2 border-orange-400">ddddddddddddddd</div>
-        <div className="border-2 border-orange-400">
-          <div className="grid grid-cols-2">
-            <div className=" ">
-              ddddddddddddddd
-            </div>
-          </div>
+      <div className="relative h-screen">
+        <div className="absolute p-0.5 bg-slate-400  h-screen right-1/2">
+          <div className="rounded-full bg-slate-100 h-5 w-5 absolute translate-x-[-50%]  top-0"></div>
         </div>
-        <div className=" h-16  border-2 border-orange-400">
-          ddddddddddddddd
-        </div>
+        <div className="bg-black absolute right-12 h-1/6 w-2/5">sdadsa</div>
+        <div className="bg-black absolute left-12 h-1/6 w-2/5 top-1/4 ">sdadsa</div>
+        <div className="bg-black absolute right-12 h-1/6 w-2/5 top-2/4"></div>
+        <div className="bg-black absolute left-12 h-1/6 w-2/5 top-3/4"></div>
+        
+        <div className="bg-black absolute right-12 h-1/6 w-2/5 bottom-0"></div>
       </div>
+      <h3>About me:</h3>
     </>
   );
 }
