@@ -13,10 +13,16 @@
     @apply mr-4 w-11/12 px-1 flex
   }
 
-  .magic{
-    @apply animate-spin 
+  .test {
+    @apply blur-xl block  absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 animate-[magic_10s_ease-in-out_infinite]
   }
 
+  .test1 {
+    @apply blur-xl block  absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r from-red-500 to-blue-500 animate-[magic2_10s_ease-in-out_infinite]
+  }
+  .test2 {
+    @apply mt-[0.5%] ml-[0.5%] block content-normal absolute z-[-1]   h-[99%] w-[99%] bg-yellow-400
+  }
 
   .story-background-img{
     @apply w-full h-[750px] absolute z-[1]
@@ -27,6 +33,6 @@
   }
 
   .story-content-right{
-    @apply absolute z-[2] right-12 h-1/6 w-2/5
+    @apply  absolute z-[2] right-12 h-1/6 w-2/5
   }
 }
