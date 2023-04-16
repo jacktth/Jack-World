@@ -5,12 +5,20 @@ import styles from "@/styles/Home.module.css";
 import About from "./about";
 import Layout from "../components/home/layout";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+import { log } from "console";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.5,
   });
+  const [scrollTop, setScrollTop] = useState(0);
+  const handleScroll = (event:React.UIEvent<HTMLImageElement, UIEvent>) => {
+    console.log(event.currentTarget.scrollTop);
+    
+    setScrollTop(event.currentTarget.scrollTop);
+  };
   return (
     <>
       <Layout />
@@ -100,16 +108,44 @@ export default function Home() {
         <img src="/stock-chart.jpg" alt="" />
       </div>
       <h3>About me:</h3>
-      <div className="relative h-screen">
-        <div className="absolute p-0.5 bg-slate-400  h-screen right-1/2">
+      <div className="relative h-[3000px]">
+        <div className="absolute p-0.5 bg-slate-400  h-full right-1/2">
           <div className="rounded-full bg-slate-100 h-5 w-5 absolute translate-x-[-50%]  top-0"></div>
         </div>
-        <div className="bg-black absolute right-12 h-1/6 w-2/5">sdadsa</div>
-        <div className="bg-black absolute left-12 h-1/6 w-2/5 top-1/4 ">sdadsa</div>
-        <div className="bg-black absolute right-12 h-1/6 w-2/5 top-2/4"></div>
-        <div className="bg-black absolute left-12 h-1/6 w-2/5 top-3/4"></div>
-        
-        <div className="bg-black absolute right-12 h-1/6 w-2/5 bottom-0"></div>
+        <div className="bg-black story-content-left">
+          sdadsa{scrollTop}
+        </div>
+        <img
+        ref={ref}
+          className={`story-background-img  ${inView ?"transition-opacity":"opacity-20"}`}
+          src="/spring.jpg"
+          alt=""
+        />
+
+        <div className="bg-black story-content-right top-1/4 ">
+          sdadsa
+        </div>
+        <img
+          className="story-background-img top-1/4 opacity-20"
+          src="/desert.jpg"
+          alt=""
+        />
+
+        <div className="bg-black story-content-left top-2/4"></div>
+        <img
+      
+          className="story-background-img top-2/4 opacity-20"
+          src="/tree.jpg"
+          alt=""
+        />
+
+        <div className="bg-black story-content-right top-3/4"></div>
+        <img
+          className="story-background-img top-3/4 opacity-20"
+          src="/winter.jpg"
+          alt=""
+        />
+        {/* <div className="bg-black story-content-right bottom-0"></div> */}
       </div>
       <h3>About me:</h3>
     </>

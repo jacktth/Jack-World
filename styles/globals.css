@@ -16,4 +16,17 @@
   .magic{
     @apply animate-spin 
   }
+
+
+  .story-background-img{
+    @apply w-full h-[750px] absolute z-[1]
+  }
+
+  .story-content-left{
+    @apply absolute z-[2] left-12 h-1/6 w-2/5
+  }
+
+  .story-content-right{
+    @apply absolute z-[2] right-12 h-1/6 w-2/5
+  }
 }
