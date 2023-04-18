@@ -9,24 +9,18 @@ import { useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const { ref:img1Ref, inView:img1InView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref:img2Ref, inView:img2InView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref:img3Ref, inView:img3InView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref:img4Ref, inView:img4InView } = useInView({
-    threshold: 0.5,
-  });
-
   return (
     <>
       <Layout />
-      <div className="grid grid-cols-2  gap-20">
-        <img className="col-span-1 xm:col-span-2  xm:hidden" src="/me.jpg" />
+      <div className="grid grid-cols-2  gap-20 mx-20">
+        <div className="flex h-hull items-center">
+          <img
+            className="w-full h-[70%] col-span-1 xm:col-span-2  xm:hidden "
+            src="/test.svg"
+            alt=""
+          />
+        </div>
+
         <div className=" col-span-1 xm:col-span-2 grid grid-cols-1  content-center  xm:hidden">
           <div className="mr-5 bg-clip-text font-extrabold text-transparent bg-gradient-to-r from-blue-300 to-purple-500">
             <p className="paragraph text-2xl font-bold">Welcome! My name is</p>
@@ -97,6 +91,56 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <h3>My Skills:</h3>
+      <div className="grid grid-cols-3  gap-20 mx-20">
+        <div className="logo-container border-yellow-300 ">
+          <a
+            className=""
+            title="Javascript"
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          >
+            <img className="logo" src="/javascript.svg" alt="" />
+
+            <p className="mt-2 text-lg">Javascript</p>
+          </a>
+        </div>
+        <div className="special-logo-container before:test after:test1  items-center">
+          <a
+            className=" magic-cover "
+            title="React"
+            href="https://react.dev/"
+          >
+            <img className="logo hover:animate-spin" src="/react.svg" alt="" />
+            <p className="mt-2 text-lg">React</p>
+          </a>
+        </div>
+        <div className="col-span-1 bg-black grid grid-cols-1">
+          <h3>Frontend</h3>
+          <ul>
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </div>
+        <div className="col-span-1 1 bg-black grid grid-cols-1">
+          <h3>Backend</h3>
+          <ul>
+            <li>Nodejs</li>
+            <li>Nestjs</li>
+            <li>Supabase</li>
+          </ul>
+        </div>
+        <div className="col-span-1 bg-black">
+          <h3>Other</h3>
+          <ul>
+            <li>Git</li>
+            <li>GitLab/GitHub</li>
+          </ul>
+        </div>
+      </div>
       <h3>My Side Projects:</h3>
       <div className="grid grid-cols-2  gap-20">
         <div>
@@ -110,50 +154,7 @@ export default function Home() {
         </div>
         <img src="/stock-chart.jpg" alt="" />
       </div>
-      <h3>About me:</h3>
-      <div className="relative h-[3000px]">
-        <div className="absolute p-0.5 bg-slate-400  h-full right-1/2 z-[3]">
-          <div className="rounded-full bg-slate-100 h-5 w-5 absolute translate-x-[-50%]  top-0"></div>
-        </div>
-        <div className="bg-black story-content-left">
-          sdadsa
-        </div>
-        <img
-        ref={img1Ref}
-          className={`story-background-img  ${img1InView ?"transition-opacity":"opacity-20"}`}
-          src="/spring.jpg"
-          alt=""
-        />
 
-        <div className="before:test   bg-transparent overflow-hidden story-content-right   top-[30%] ">
-        <div className="before:test1"></div>
-          <div className="test2">dsad</div>
-          
-        </div>
-        <img
-        ref={img2Ref}
-          className={`story-background-img top-1/4  ${img2InView ?"transition-opacity":"opacity-20"}`}
-          src="/desert.jpg"
-          alt=""
-        />
-
-        <div className="bg-black story-content-left top-2/4"></div>
-        <img
-      ref={img3Ref}
-      className={`story-background-img top-2/4  ${img3InView ?"transition-opacity":"opacity-20"}`}
-          src="/tree.jpg"
-          alt=""
-        />
-
-        <div className="bg-black story-content-right top-3/4"></div>
-        <img
-          ref={img4Ref}
-          className={`story-background-img top-3/4  ${img4InView ?"transition-opacity":"opacity-20"}`}
-          src="/winter.jpg"
-          alt=""
-        />
-        {/* <div className="bg-black story-content-right bottom-0"></div> */}
-      </div>
       <h3>About me:</h3>
     </>
   );

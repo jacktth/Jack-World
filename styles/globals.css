@@ -9,30 +9,36 @@
   .paragraph {
     @apply my-8;
   }
-  .logo {
-    @apply mr-4 w-11/12 px-1 flex
-  }
 
+  .logo-container {
+    @apply col-span-1 border-x-2 border-b-4 rounded text-center flex items-center justify-center drop-shadow-lg;
+  }
+  .logo {
+    @apply  px-1 flex w-full h-28;
+  }
+  .special-logo-container {
+    @apply col-span-1 rounded text-center flex  drop-shadow-lg bg-transparent overflow-hidden;
+  }
   .test {
-    @apply blur-xl block  absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 animate-[magic_10s_ease-in-out_infinite]
+    @apply blur-xl absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r from-cyan-300 to-blue-300 animate-[magic_10s_ease-in-out_infinite];
   }
 
   .test1 {
-    @apply blur-xl block  absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r from-red-500 to-blue-500 animate-[magic2_10s_ease-in-out_infinite]
+    @apply blur-xl  absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r from-white to-blue-700 animate-[magic2_10s_ease-in-out_infinite];
   }
-  .test2 {
-    @apply mt-[0.5%] ml-[0.5%] block content-normal absolute z-[-1]   h-[99%] w-[99%] bg-yellow-400
-  }
-
-  .story-background-img{
-    @apply w-full h-[750px] absolute z-[1]
+  .magic-cover {
+    @apply mt-[0.5%] ml-[0.5%]  z-[0]  h-[99%] w-[99%] bg-[#343434] flex flex-col justify-center;
   }
 
-  .story-content-left{
-    @apply absolute z-[2] left-12 h-1/6 w-2/5
+  .story-background-img {
+    @apply w-full h-[750px] absolute z-[1];
   }
 
-  .story-content-right{
-    @apply  absolute z-[2] right-12 h-1/6 w-2/5
+  .story-content-left {
+    @apply absolute z-[2] left-12 h-1/6 w-2/5;
+  }
+
+  .story-content-right {
+    @apply absolute z-[2] right-12 h-1/6 w-2/5;
   }
 }

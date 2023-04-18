@@ -1,124 +1,70 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 export default function About() {
+  const { ref: img1Ref, inView: img1InView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: img2Ref, inView: img2InView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: img3Ref, inView: img3InView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: img4Ref, inView: img4InView } = useInView({
+    threshold: 0.5,
+  });
   return (
     <>
-      <main className="bg-black h-screen">
-        <div className="">
-        <motion.div
-        
-            style={{
-              position:"absolute",
-
-              height: "50%",
-              width: "25%",
-              padding: "1px",
-              backgroundColor: "red",
-              filter: "blur(4px)"
-            }}
-            animate={{ rotate: 360 }}
-            transition={{ ease: "linear", duration: 1, repeat: Infinity }}
-          />
-
-            <motion.img
-            className="absolute"
-              src="/me.jpg"
-              sizes="(max-width: 768px) 100vw,
-                  (max-width: 1200px) 50vw,
-                  33vw"
-              style={{
-                position:"absolute",
-                height: "50%",
-                width: "25%",
-                padding: "1px",
-                borderRadius: 30,
-                backgroundColor: "transparent",
-              }}
-              // transition={{ ease: "linear", duration: 2, repeat: Infinity }}
-            />
-
-      
+    <h3>About me:</h3>
+      <div className="relative h-[3000px]">
+        <div className="absolute p-0.5 bg-slate-400  h-full right-1/2 z-[3]">
+          <div className="rounded-full bg-slate-100 h-5 w-5 absolute translate-x-[-50%]  top-0"></div>
         </div>
-      </main>
-      <main>
-        <nav className="bg-gray-800 py-5 w-full">
-          <div className="flex space-x-20 xm:hidden">
-            <a href="#" className="nav-btm " aria-current="page">
-              Jack's World
-            </a>
-            <a href="#" className="nav-btm " aria-current="page">
-              Home
-            </a>
+        <div className="bg-black story-content-left">sdadsa</div>
+        <img
+          ref={img1Ref}
+          className={`story-background-img  ${
+            img1InView ? "transition-opacity" : "opacity-20"
+          }`}
+          src="/spring.jpg"
+          alt=""
+        />
 
-            <a href="#" className="nav-btm ">
-              About
-            </a>
-            <a href="#" className="nav-btm ">
-              Education
-            </a>
-            <a href="#" className="nav-btm ">
-              Projects
-            </a>
+        <div className="before:test   bg-transparent overflow-hidden story-content-right  top-[30%] ">
+          <div className="before:test1"></div>
+          <div className="test2">dsad</div>
+        </div>
+        <img
+          ref={img2Ref}
+          className={`story-background-img top-1/4  ${
+            img2InView ? "transition-opacity" : "opacity-20"
+          }`}
+          src="/desert.jpg"
+          alt=""
+        />
 
-            <a href="#" className="nav-btm ">
-              Contact
-            </a>
-          </div>
-          <div className="md:hidden flex items-center">
-            <button className="outline-none mobile-menu-button">
-              <svg
-                className="w-6 h-6 text-gray-500"
-                x-show="!showMenu"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
-          <div className="mobile-menu">
-            <ul>
-              <li>
-                <a href="#" className="nav-btm " aria-current="page">
-                  Jack's World
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-btm " aria-current="page">
-                  Home
-                </a>
-              </li>
+        <div className="bg-black story-content-left top-2/4"></div>
+        <img
+          ref={img3Ref}
+          className={`story-background-img top-2/4  ${
+            img3InView ? "transition-opacity" : "opacity-20"
+          }`}
+          src="/tree.jpg"
+          alt=""
+        />
 
-              <li>
-                <a href="#" className="nav-btm ">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-btm ">
-                  Education
-                </a>
-              </li>
-
-              <li>
-                <a href="#" className="nav-btm ">
-                  Projects
-                </a>
-              </li>
-
-              <li>
-                <a href="#" className="nav-btm ">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </main>
+        <div className="bg-black story-content-right top-3/4"></div>
+        <img
+          ref={img4Ref}
+          className={`story-background-img top-3/4  ${
+            img4InView ? "transition-opacity" : "opacity-20"
+          }`}
+          src="/winter.jpg"
+          alt=""
+        />
+        {/* <div className="bg-black story-content-right bottom-0"></div> */}
+      </div>
     </>
   );
 }
