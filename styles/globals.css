@@ -11,23 +11,23 @@
   }
 
   .logo-container {
-    @apply col-span-1 border-x-2 border-b-4 rounded text-center flex items-center justify-center drop-shadow-lg;
+    @apply py-9 col-span-1 border-x-2 border-b-4 rounded text-center flex items-center justify-center drop-shadow-lg;
   }
   .logo {
-    @apply  px-1 flex w-full h-28;
+    @apply  px-1 flex w-full h-24;
   }
   .special-logo-container {
     @apply col-span-1 rounded text-center flex  drop-shadow-lg bg-transparent overflow-hidden;
   }
-  .test {
-    @apply blur-xl absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r from-cyan-300 to-blue-300 animate-[magic_10s_ease-in-out_infinite];
+  .magic-layer1 {
+    @apply blur-xl absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r  animate-[magic_20s_linear_infinite];
   }
 
-  .test1 {
-    @apply blur-xl  absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r from-white to-blue-700 animate-[magic2_10s_ease-in-out_infinite];
+  .magic-layer2 {
+    @apply blur-xl  absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r  animate-[magic2_20s_linear_infinite];
   }
   .magic-cover {
-    @apply mt-[0.5%] ml-[0.5%]  z-[0]  h-[99%] w-[99%] bg-[#343434] flex flex-col justify-center;
+    @apply mt-[0.7%] ml-[1%]  z-[0]  h-[98%] w-[98%] bg-[#343434] flex flex-col justify-center;
   }
 
   .story-background-img {
@@ -40,5 +40,28 @@
 
   .story-content-right {
     @apply absolute z-[2] right-12 h-1/6 w-2/5;
+  }
+
+  .project-source {
+    @apply font-bold text-violet-500 px-2 py-1
+     border-2 rounded-xl mr-4 border-violet-500 
+     duration-300 hover:scale-105 hover:transition-colors hover:text-white hover:bg-violet-600 
+     active:bg-violet-700 
+     focus:outline-none focus:ring focus:ring-violet-300
+  }
+
+  .project-demo {
+    @apply font-bold text-violet-500 px-2 py-1 rounded-xl mr-4  
+       hover:text-white 
+       hover:bg-gradient-to-r hover:bg-violet-700
+     transition-colors ease-in-out  duration-300 bg-right-bottom
+    active:bg-violet-700
+    focus:outline-none focus:ring focus:ring-violet-300 
+  }
+  .project-content {
+    @apply text-black col-span-1
+  }
+  .project-image {
+    @apply hover:animate-[custom-bounce_1s_linear_infinite] col-span-2  transition-opacity duration-1000 ease-in-out 
   }
 }
