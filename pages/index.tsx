@@ -10,128 +10,181 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { ref: project1, inView: project1InView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
+    threshold: 0.4,
+    triggerOnce: false,
   });
   return (
     <>
       <Layout />
-      <div className="grid grid-cols-2  gap-20 mx-20">
-        <div className="flex h-full items-center">
-          <img
-            className="w-full h-[70%] col-span-1 xm:col-span-2  xm:hidden "
-            src="/test.svg"
-            alt=""
-          />
+      <div
+        className="grid gap-20 grid-cols-2 mb-9 h-auto
+        sm:mx-20 
+      xm:grid-cols-1"
+      >
+        <div
+          className="    
+        xm:hidden "
+        >
+          <img className="w-full   " src="/me.svg" alt="" />
         </div>
 
-        <div className=" col-span-1 xm:col-span-2 grid grid-cols-1  content-center  xm:hidden">
-          <div className="mr-5 bg-clip-text font-extrabold text-transparent bg-gradient-to-r from-blue-300 to-purple-500">
+        <div
+          className="
+         flex justify-center items-center
+        xm:hidden"
+        >
+          <div className=" h-auto mr-5 bg-clip-text font-extrabold text-transparent bg-gradient-to-r from-blue-300 to-purple-500">
             <p className="paragraph text-2xl font-bold">Welcome! My name is</p>
             <p className="paragraph py-3 text-8xl font-serif "> Jack Tang </p>
             <p className="paragraph text-2xl font-bold">
               If you're hiring a junior front-end developer, get in touch!
             </p>
-      
-
           </div>
         </div>
 
-        <div className="col-span-1 xm:col-span-2 grid grid-cols-1  content-center sm:hidden">
-          <img className="col-span-1 xm:col-span-2 " src="/me.jpg" />
-
-          <div className="absolute bottom-7">
-            <p className="paragraph text-2xl ">Welcome! My name is</p>
-            <p className="paragraph text-8xl font-serif "> Jack Tang </p>
-            <p className="paragraph text-2xl font-extrabold">
+        <div
+          className=" content-center relative 
+        sm:hidden"
+        >
+          <div
+            className="absolute top-[70%] text-center 
+        sm:hidden"
+          >
+            <p className=" text-xl  mb-1">Welcome! My name is</p>
+            <p className="text-xl mb-1 font-serif "> Jack Tang </p>
+            <p className="text-xl  mb-1 font-extrabold">
               If you're hiring a junior front-end developer, get in touch!
             </p>
           </div>
+          <img className="" src="/me.svg" />
         </div>
       </div>
-      <div className="">
-      <h3 className="w-full text-center">My Skills:</h3>
-      <div className="grid grid-cols-4  gap-10 m-20 h-full">
-        <div className="logo-container border-yellow-300 ">
-          <a
-            className=""
-            title="Javascript"
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          >
-            <img className="logo" src="/javascript.svg" alt="" />
 
-            <p className="mt-2 text-lg">Javascript</p>
-          </a>
-        </div>
-
-        <div className="logo-container border-blue-600 ">
-          <a
-            className=""
-            title="Javascript"
-            href="https://www.typescriptlang.org/"
-          >
-            <img className="logo" src="/typescript.svg" alt="" />
-
-            <p className="mt-2 text-lg">Typescript</p>
-          </a>
-        </div>
-        <div className="logo-container border-blue-500 ">
-          <a className="" title="CSS" href="https://www.typescriptlang.org/">
-            <img className="logo" src="/css.svg" alt="" />
-
-            <p className="mt-2 text-lg">CSS</p>
-          </a>
-        </div>
-        <div className="logo-container border-orange-500 ">
-          <a className="" title="HTML5" href="https://www.typescriptlang.org/">
-            <img className="logo" src="/html.svg" alt="" />
-
-            <p className="mt-2 text-lg">HTML5</p>
-          </a>
-        </div>
-        <div className="logo-container border-cyan-500 ">
-          <a className="" title="Tailwindcss" href="https://tailwindcss.com/">
-            <img className="logo" src="/tailwind.svg" alt="" />
-
-            <p className="mt-2 text-lg">Tailwindcss</p>
-          </a>
-        </div>
-        <div className="special-logo-container before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2 after:from-blue-500 after:to-white ">
-          <a className=" magic-cover " title="React" href="https://react.dev/">
-            <img className="logo hover:animate-spin" src="/react.svg" alt="" />
-            <p className="mt-2 text-lg">React</p>
-          </a>
-        </div>
-        <div className="logo-container border-green-700 brightness-150">
-          <a className="" title="Nodejs" href="https://nodejs.org/en">
-            <img className="logo" src="/nodejs.svg" alt="" />
-
-            <p className="mt-2 text-lg">Nodejs</p>
-          </a>
-        </div>
-        <div className="logo-container border-red-500 ">
-          <a
-            className=""
-            title="Git"
-            href="https://git-scm.com/"
-          >
-            <img className="logo" src="/git.svg" alt="" />
-
-            <p className="mt-2 text-lg">Git</p>
-          </a>
-        </div>
-      </div>
-      </div>
-
-
-      <div ref={project1} className="bg-white text-black gap-20 px-20">
-          <h3 className="w-full text-center">Projects:</h3>
+      <div className="w-auto h-auto mb-9">
+        <h3 className="w-full text-center">My Skills:</h3>
         <div
-          className={` grid grid-cols-3  gap-20 px-4 ${
-            project1InView ? "opacity-100" : "opacity-0"
-          }`}
+          className="grid grid-cols-4    h-full 
+         sm:gap-10
+        xm:m-2 xm:gap-2 xm:grid-cols-3"
         >
-          <div className=" project-content">
+          <div
+            className="
+          sm:logo-container border-yellow-300 
+          xm:logo-container-xm"
+          >
+            <a
+              className=""
+              title="Javascript"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            >
+              <img className="logo" src="/javascript.svg" alt="" />
+
+              <p className="mt-2 text-lg">Javascript</p>
+            </a>
+          </div>
+
+          <div
+            className="sm:logo-container border-blue-600 
+          xm:logo-container-xm"
+          >
+            <a
+              className=""
+              title="Javascript"
+              href="https://www.typescriptlang.org/"
+            >
+              <img className="logo" src="/typescript.svg" alt="" />
+
+              <p className="mt-2 text-lg">Typescript</p>
+            </a>
+          </div>
+          <div
+            className="logo-container border-blue-500 
+          xm:logo-container-xm"
+          >
+            <a className="" title="CSS" href="https://www.typescriptlang.org/">
+              <img className="logo" src="/css.svg" alt="" />
+
+              <p className="mt-2 text-lg">CSS</p>
+            </a>
+          </div>
+          <div
+            className="logo-container border-orange-500 
+          xm:logo-container-xm"
+          >
+            <a
+              className=""
+              title="HTML5"
+              href="https://www.typescriptlang.org/"
+            >
+              <img className="logo" src="/html.svg" alt="" />
+
+              <p className="mt-2 text-lg">HTML5</p>
+            </a>
+          </div>
+          <div
+            className="logo-container border-cyan-500 
+          xm:logo-container-xm"
+          >
+            <a className="" title="Tailwindcss" href="https://tailwindcss.com/">
+              <img className="logo" src="/tailwind.svg" alt="" />
+
+              <p className="mt-2 text-lg">Tailwindcss</p>
+            </a>
+          </div>
+          <div
+            className=" before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2 after:from-blue-500 after:to-white 
+          sm:special-logo-container
+          xm:special-logo-container-xm"
+          >
+            <a
+              className=" sm:magic-cover 
+              xm:magic-cover-xm"
+              title="React"
+              href="https://react.dev/"
+            >
+              <img
+                className="logo hover:animate-spin"
+                src="/react.svg"
+                alt=""
+              />
+              <p className="mt-2 text-lg">React</p>
+            </a>
+          </div>
+          <div
+            className="logo-container border-green-700 brightness-150
+          xm:logo-container-xm"
+          >
+            <a className="" title="Nodejs" href="https://nodejs.org/en">
+              <img className="logo" src="/nodejs.svg" alt="" />
+
+              <p className="mt-2 text-lg">Nodejs</p>
+            </a>
+          </div>
+          <div
+            className="logo-container border-red-500 
+          xm:logo-container-xm"
+          >
+            <a className="" title="Git" href="https://git-scm.com/">
+              <img className="logo" src="/git.svg" alt="" />
+
+              <p className="mt-2 text-lg">Git</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        ref={project1}
+        className="bg-white text-black h-auto
+      "
+      >
+        <p className="w-full text-center text-2xl mt-0.5">Projects:</p>
+        <div
+          className={` sm:project-container
+      xm:project-container-xm
+          ${project1InView ? "opacity-100" : "opacity-0"}`}
+        >
+          <div className="project-content">
             <h1>Stock-Chart</h1>
             <p>
               It is a web application for users to view stock price. One of the
@@ -148,17 +201,13 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <a className="project-image" href="">
-            <img
-           
-              src="/stock-chart.jpg"
-              alt=""
-            />
-          </a>
+          <div className="project-image" onClick={()=>{
+            
+          }}>
+            <img src="/stock-chart.svg" alt="" />
+          </div>
         </div>
       </div>
-
-      <h3>About me:</h3>
     </>
   );
 }
