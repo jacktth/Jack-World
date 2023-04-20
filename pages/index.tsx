@@ -27,7 +27,7 @@ export default function Home() {
     <>
       <Layout />
       <div
-        className="grid gap-20 grid-cols-2 mb-9 h-auto
+        className="grid gap-20 grid-cols-2  h-auto
         sm:mx-20 
       xm:grid-cols-1"
       >
@@ -70,8 +70,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-auto h-auto mb-9 bg-neutral-800">
-        <p className="w-full text-center text-3xl mb-9 ">My Skills:</p>
+      <div className="w-auto h-auto bg-neutral-800">
+        <p className="w-full text-center text-3xl py-6">My Skills</p>
         <div
           className="grid grid-cols-4    h-full 
          sm:gap-10
@@ -141,7 +141,7 @@ export default function Home() {
               <p className="mt-2 text-lg">Tailwindcss</p>
             </a>
           </div>
-          <div
+          {/* <div
             className=" before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2 after:from-blue-500 after:to-white 
           sm:special-logo-container
           xm:special-logo-container-xm"
@@ -159,7 +159,7 @@ export default function Home() {
               />
               <p className="mt-2 text-lg">React</p>
             </a>
-          </div>
+          </div> */}
           <div
             className="logo-container border-green-700 brightness-150
           xm:logo-container-xm"
@@ -188,14 +188,14 @@ export default function Home() {
         className=" h-auto
       "
       >
-        <p className="w-full text-center text-2xl mt-0.5 mb-9">Projects:</p>
+        <p className="w-full text-center text-3xl py-4">Projects</p>
         <div
           className={` sm:project-container
       xm:project-container-xm
           ${project1InView ? "opacity-100" : "opacity-0"}`}
         >
           <div className="project-content">
-            <h1>Stock-Chart</h1>
+            <p className="font-medium">Stock-Chart</p>
             <p>
               It is a web application for users to view stock price. One of the
               main feature is for the user to save a specific range of stock
