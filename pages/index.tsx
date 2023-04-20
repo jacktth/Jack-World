@@ -47,7 +47,7 @@ export default function Home() {
             <p className="paragraph text-2xl font-bold">Welcome! My name is</p>
             <p className="paragraph py-3 text-8xl font-serif "> Jack Tang </p>
             <p className="paragraph text-2xl font-bold">
-              If you're hiring a junior front-end developer, get in touch!
+              If you&apos;re hiring a junior front-end developer, get in touch!
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function Home() {
             <p className=" text-xl  mb-1">Welcome! My name is</p>
             <p className="text-xl mb-1 font-serif "> Jack Tang </p>
             <p className="text-xl  mb-1 font-extrabold">
-              If you're hiring a junior front-end developer, get in touch!
+              If you&apos;re hiring a junior front-end developer, get in touch!
             </p>
           </div>
           <Image className="w-full"  src={me} alt={""} />
