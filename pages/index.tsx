@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
     <Head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width"/>
     </Head>
       <Layout />
       <div
@@ -148,6 +148,7 @@ export default function Home() {
               <p className="mt-2 text-lg">Tailwindcss</p>
             </a>
           </div>
+
           <div
             className=" 
           before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2
@@ -181,6 +182,7 @@ export default function Home() {
               <p className="mt-2 text-lg">Nodejs</p>
             </a>
           </div>
+
           <div
             className="border-red-500 
             sm:logo-container 

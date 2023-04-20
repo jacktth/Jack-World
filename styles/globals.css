@@ -22,11 +22,11 @@
     @apply px-1 flex w-full h-20;
   }
   .special-logo-container {
-    @apply w-full h-full col-span-1 rounded text-center flex  drop-shadow-lg bg-transparent overflow-hidden;
+    @apply  col-span-1 rounded text-center flex  drop-shadow-lg bg-transparent overflow-hidden;
   }
 
   .special-logo-container-xm {
-    @apply w-full h-full col-span-1 rounded text-center flex  drop-shadow-lg bg-transparent overflow-hidden;
+    @apply  col-span-1 rounded text-center flex  drop-shadow-lg bg-transparent overflow-hidden;
   }
   .magic-layer1 {
     @apply blur-xl absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r  animate-[magic_20s_linear_infinite];
@@ -36,7 +36,7 @@
     @apply blur-xl absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r  animate-[magic2_20s_linear_infinite];
   }
   .magic-cover {
-    @apply right-[1%]   absolute z-[0]  h-[99%] w-[98%] bg-neutral-800 flex flex-col justify-center;
+    @apply right-[1%] absolute z-[0]  h-[99%] w-[98%] bg-neutral-800 flex flex-col justify-center;
   }
   .magic-cover-xm {
     @apply absolute right-[1%]  z-[0]  h-[99%] w-[98%] bg-neutral-800 flex flex-col justify-center;
