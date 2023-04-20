@@ -161,8 +161,9 @@ export default function Home() {
           
           >
             <a
-              className=" sm:magic-cover 
-              xm:magic-cover-xm"
+            // sm:magic-cover 
+            // xm:magic-cover-xm
+              className=" "
               title="React"
               href="https://react.dev/"
             >
