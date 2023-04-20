@@ -6,17 +6,16 @@ import About from "./about";
 import Layout from "../components/home/layout";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
-import me from '../public/me.svg'
-import js from '../public/javascript.svg'
-import ts from '../public/typescript.svg'
-import tw from '../public/tailwind.svg'
-import html from '../public/html.svg'
-import css from '../public/css.svg'
-import git from '../public/git.svg'
-import nodejs from '../public/nodejs.svg'
-import rt from '../public/react.svg'
-import stockChart from '../public/stock-chart.svg'
-
+import me from "../public/me.svg";
+import js from "../public/javascript.svg";
+import ts from "../public/typescript.svg";
+import tw from "../public/tailwind.svg";
+import html from "../public/html.svg";
+import css from "../public/css.svg";
+import git from "../public/git.svg";
+import nodejs from "../public/nodejs.svg";
+import rt from "../public/react.svg";
+import stockChart from "../public/stock-chart.svg";
 
 export default function Home() {
   const { ref: project1, inView: project1InView } = useInView({
@@ -25,6 +24,9 @@ export default function Home() {
   });
   return (
     <>
+    <Head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </Head>
       <Layout />
       <div
         className="grid gap-20 grid-cols-2  h-auto
@@ -35,7 +37,7 @@ export default function Home() {
           className="    
         xm:hidden "
         >
-          <Image className="w-full   "  src={me} alt="" />
+          <Image className="w-full   " src={me} alt="" />
         </div>
 
         <div
@@ -66,7 +68,7 @@ export default function Home() {
               If you&apos;re hiring a junior front-end developer, get in touch!
             </p>
           </div>
-          <Image className="w-full"  src={me} alt={""} />
+          <Image className="w-full" src={me} alt={""} />
         </div>
       </div>
 
@@ -79,7 +81,8 @@ export default function Home() {
         >
           <div
             className="
-          sm:logo-container border-yellow-300 
+            border-yellow-300 
+          sm:logo-container 
           xm:logo-container-xm"
           >
             <a
@@ -94,7 +97,8 @@ export default function Home() {
           </div>
 
           <div
-            className="sm:logo-container border-blue-600 
+            className=" border-blue-600 
+            sm:logo-container
           xm:logo-container-xm"
           >
             <a
@@ -108,7 +112,8 @@ export default function Home() {
             </a>
           </div>
           <div
-            className="logo-container border-blue-500 
+            className=" border-blue-500 
+            sm:logo-container
           xm:logo-container-xm"
           >
             <a className="" title="CSS" href="https://www.typescriptlang.org/">
@@ -118,7 +123,8 @@ export default function Home() {
             </a>
           </div>
           <div
-            className="logo-container border-orange-500 
+            className=" border-orange-500 
+           sm:logo-container
           xm:logo-container-xm"
           >
             <a
@@ -132,7 +138,8 @@ export default function Home() {
             </a>
           </div>
           <div
-            className="logo-container border-cyan-500 
+            className="border-cyan-500 
+            sm:logo-container 
           xm:logo-container-xm"
           >
             <a className="" title="Tailwindcss" href="https://tailwindcss.com/">
@@ -141,8 +148,10 @@ export default function Home() {
               <p className="mt-2 text-lg">Tailwindcss</p>
             </a>
           </div>
-          {/* <div
-            className=" before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2 after:from-blue-500 after:to-white 
+          <div
+            className=" 
+          before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2
+        after:from-blue-500 after:to-white 
           sm:special-logo-container
           xm:special-logo-container-xm"
           >
@@ -159,9 +168,11 @@ export default function Home() {
               />
               <p className="mt-2 text-lg">React</p>
             </a>
-          </div> */}
+          </div>
           <div
-            className="logo-container border-green-700 brightness-150
+            className="
+           border-green-700 brightness-150
+           sm:logo-container
           xm:logo-container-xm"
           >
             <a className="" title="Nodejs" href="https://nodejs.org/en">
@@ -171,7 +182,8 @@ export default function Home() {
             </a>
           </div>
           <div
-            className="logo-container border-red-500 
+            className="border-red-500 
+            sm:logo-container 
           xm:logo-container-xm"
           >
             <a className="" title="Git" href="https://git-scm.com/">
@@ -211,9 +223,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="project-image" onClick={()=>{
-            
-          }}>
+          <div className="project-image" onClick={() => {}}>
             <Image src={stockChart} alt="" />
           </div>
         </div>
