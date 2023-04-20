@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
     <Head>
-    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Head>
       <Layout />
       <div
@@ -148,13 +148,17 @@ export default function Home() {
               <p className="mt-2 text-lg">Tailwindcss</p>
             </a>
           </div>
-
+          
           <div
+          // before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2
+          // after:from-blue-500 after:to-white 
+          //   sm:special-logo-container
+          //   xm:special-logo-container-xm
             className=" 
-          before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2
-        after:from-blue-500 after:to-white 
-          sm:special-logo-container
-          xm:special-logo-container-xm"
+            border-blue-400
+          sm:logo-container 
+          xm:logo-container-xm"
+          
           >
             <a
               className=" sm:magic-cover 
