@@ -36,10 +36,10 @@
     @apply blur-xl absolute z-[-1]  h-full w-full content-["a"] text-transparent bg-gradient-to-r  animate-[magic2_20s_linear_infinite];
   }
   .magic-cover {
-    @apply right-[1%]   absolute z-[0]  h-[99%] w-[98%] bg-[#343434] flex flex-col justify-center;
+    @apply right-[1%]   absolute z-[0]  h-[99%] w-[98%] bg-neutral-800 flex flex-col justify-center;
   }
   .magic-cover-xm {
-    @apply absolute right-[1%]  z-[0]  h-[99%] w-[98%] bg-[#343434] flex flex-col justify-center;
+    @apply absolute right-[1%]  z-[0]  h-[99%] w-[98%] bg-neutral-800 flex flex-col justify-center;
   }
   .story-background-img {
     @apply w-full h-[750px] absolute z-[1];
@@ -79,7 +79,7 @@
 
   }
   .project-content {
-    @apply text-black col-span-1;
+    @apply col-span-1;
   }
   .project-image {
     @apply hover:scale-[300] hover:animate-[custom-bounce_1s_linear_infinite] col-span-2  transition-opacity duration-1000 ease-in-out;

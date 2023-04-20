@@ -70,8 +70,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-auto h-auto mb-9">
-        <h3 className="w-full text-center">My Skills:</h3>
+      <div className="w-auto h-auto mb-9 bg-neutral-800">
+        <p className="w-full text-center text-3xl mb-9 ">My Skills:</p>
         <div
           className="grid grid-cols-4    h-full 
          sm:gap-10
@@ -185,10 +185,10 @@ export default function Home() {
 
       <div
         ref={project1}
-        className="bg-white text-black h-auto
+        className=" h-auto
       "
       >
-        <p className="w-full text-center text-2xl mt-0.5">Projects:</p>
+        <p className="w-full text-center text-2xl mt-0.5 mb-9">Projects:</p>
         <div
           className={` sm:project-container
       xm:project-container-xm
