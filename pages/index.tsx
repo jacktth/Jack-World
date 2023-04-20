@@ -6,7 +6,17 @@ import About from "./about";
 import Layout from "../components/home/layout";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
-const inter = Inter({ subsets: ["latin"] });
+import me from '../public/me.svg'
+import js from '../public/javascript.svg'
+import ts from '../public/typescript.svg'
+import tw from '../public/tailwind.svg'
+import html from '../public/html.svg'
+import css from '../public/css.svg'
+import git from '../public/git.svg'
+import nodejs from '../public/nodejs.svg'
+import rt from '../public/react.svg'
+import stockChart from '../public/stock-chart.svg'
+
 
 export default function Home() {
   const { ref: project1, inView: project1InView } = useInView({
@@ -25,7 +35,7 @@ export default function Home() {
           className="    
         xm:hidden "
         >
-          <img className="w-full   " src="/me.svg" alt="" />
+          <Image className="w-full   "  src={me} alt="" />
         </div>
 
         <div
@@ -56,7 +66,7 @@ export default function Home() {
               If you're hiring a junior front-end developer, get in touch!
             </p>
           </div>
-          <img className="" src="/me.svg" />
+          <Image className="w-full"  src={me} alt={""} />
         </div>
       </div>
 
@@ -77,7 +87,7 @@ export default function Home() {
               title="Javascript"
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             >
-              <img className="logo" src="/javascript.svg" alt="" />
+              <Image className="logo" src={js} alt="" />
 
               <p className="mt-2 text-lg">Javascript</p>
             </a>
@@ -92,7 +102,7 @@ export default function Home() {
               title="Javascript"
               href="https://www.typescriptlang.org/"
             >
-              <img className="logo" src="/typescript.svg" alt="" />
+              <Image className="logo" src={ts} alt="" />
 
               <p className="mt-2 text-lg">Typescript</p>
             </a>
@@ -102,7 +112,7 @@ export default function Home() {
           xm:logo-container-xm"
           >
             <a className="" title="CSS" href="https://www.typescriptlang.org/">
-              <img className="logo" src="/css.svg" alt="" />
+              <Image className="logo" src={css} alt="" />
 
               <p className="mt-2 text-lg">CSS</p>
             </a>
@@ -116,7 +126,7 @@ export default function Home() {
               title="HTML5"
               href="https://www.typescriptlang.org/"
             >
-              <img className="logo" src="/html.svg" alt="" />
+              <Image className="logo" src={html} alt="" />
 
               <p className="mt-2 text-lg">HTML5</p>
             </a>
@@ -126,7 +136,7 @@ export default function Home() {
           xm:logo-container-xm"
           >
             <a className="" title="Tailwindcss" href="https://tailwindcss.com/">
-              <img className="logo" src="/tailwind.svg" alt="" />
+              <Image className="logo" src={tw} alt="" />
 
               <p className="mt-2 text-lg">Tailwindcss</p>
             </a>
@@ -142,9 +152,9 @@ export default function Home() {
               title="React"
               href="https://react.dev/"
             >
-              <img
+              <Image
                 className="logo hover:animate-spin"
-                src="/react.svg"
+                src={rt}
                 alt=""
               />
               <p className="mt-2 text-lg">React</p>
@@ -155,7 +165,7 @@ export default function Home() {
           xm:logo-container-xm"
           >
             <a className="" title="Nodejs" href="https://nodejs.org/en">
-              <img className="logo" src="/nodejs.svg" alt="" />
+              <Image className="logo" src={nodejs} alt="" />
 
               <p className="mt-2 text-lg">Nodejs</p>
             </a>
@@ -165,7 +175,7 @@ export default function Home() {
           xm:logo-container-xm"
           >
             <a className="" title="Git" href="https://git-scm.com/">
-              <img className="logo" src="/git.svg" alt="" />
+              <Image className="logo" src={git} alt="" />
 
               <p className="mt-2 text-lg">Git</p>
             </a>
@@ -204,7 +214,7 @@ export default function Home() {
           <div className="project-image" onClick={()=>{
             
           }}>
-            <img src="/stock-chart.svg" alt="" />
+            <Image src={stockChart} alt="" />
           </div>
         </div>
       </div>

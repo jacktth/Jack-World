@@ -22,7 +22,7 @@ export default function About() {
           <div className="rounded-full bg-slate-100 h-5 w-5 absolute translate-x-[-50%]  top-0"></div>
         </div>
         <div className="bg-black story-content-left">sdadsa</div>
-        <img
+        {/* <Image
           ref={img1Ref}
           className={`story-background-img  ${
             img1InView ? "transition-opacity" : "opacity-20"
@@ -35,7 +35,7 @@ export default function About() {
           <div className="before:test1"></div>
           <div className="test2">dsad</div>
         </div>
-        <img
+        <Image
           ref={img2Ref}
           className={`story-background-img top-1/4  ${
             img2InView ? "transition-opacity" : "opacity-20"
@@ -45,7 +45,7 @@ export default function About() {
         />
 
         <div className="bg-black story-content-left top-2/4"></div>
-        <img
+        <Image
           ref={img3Ref}
           className={`story-background-img top-2/4  ${
             img3InView ? "transition-opacity" : "opacity-20"
@@ -55,14 +55,14 @@ export default function About() {
         />
 
         <div className="bg-black story-content-right top-3/4"></div>
-        <img
+        <Image
           ref={img4Ref}
           className={`story-background-img top-3/4  ${
             img4InView ? "transition-opacity" : "opacity-20"
           }`}
           src="/winter.jpg"
           alt=""
-        />
+        /> */}
         {/* <div className="bg-black story-content-right bottom-0"></div> */}
       </div>
     </>
