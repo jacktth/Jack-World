@@ -6,7 +6,7 @@ export default function Layout() {
   return (
     <Navbar className="" isBordered variant="sticky" css={{backgroundColor: '$myDarkColor'}} >
       <Navbar.Brand>
-        <Text className="font-bold text-2xl">Jack's World</Text>
+        <Text className="font-bold text-2xl">Jack&apos;s World</Text>
       </Navbar.Brand>
       <Navbar.Content
         enableCursorHighlight
