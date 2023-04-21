@@ -71,7 +71,7 @@
   }
 
   .project-container {
-    @apply grid grid-cols-3 gap-20 px-20 duration-1000;
+    @apply block grid grid-cols-3 gap-20 px-20 duration-1000;
   }
 
   .project-container-xm {
