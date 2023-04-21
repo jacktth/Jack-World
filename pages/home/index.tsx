@@ -44,7 +44,7 @@ function Home() {
         >
           <div className=" h-auto mr-5 bg-clip-text font-extrabold text-transparent bg-gradient-to-r from-blue-300 to-purple-500">
             <p className="paragraph text-2xl font-bold">Welcome! My name is</p>
-            <p className="paragraph py-3 text-8xl font-serif "> Jack Tang </p>
+            <p className="paragraph py-3 text-8xl "> Jack Tang </p>
             <p className="paragraph text-2xl font-bold">
               If you&apos;re hiring a junior front-end developer, get in touch!
             </p>
@@ -56,12 +56,13 @@ function Home() {
         sm:hidden"
         >
           <div
-            className="absolute top-[70%] text-center 
+            className="absolute top-[70%] 
+            paragraph-container
         sm:hidden"
           >
-            <p className=" text-xl  mb-1">Welcome! My name is</p>
-            <p className="text-xl mb-1 font-serif "> Jack Tang </p>
-            <p className="text-xl  mb-1 font-extrabold">
+            <p className="paragraph-xm text-xl  ">Welcome! My name is</p>
+            <p className="paragraph-xm text-2xl    font-bold "> Jack Tang </p>
+            <p className="paragraph-xm text-xl   ">
               If you&apos;re hiring a junior front-end developer, get in touch!
             </p>
           </div>
@@ -200,7 +201,7 @@ function Home() {
         <p className="w-full text-center text-3xl py-4">Projects</p>
         <div
           className={` sm:project-container
-      xm:project-container-xm
+            xm:project-container-xm
           ${project1InView ? "opacity-100" : "opacity-0"}`}
         >
           <div className="project-content">

@@ -6,8 +6,17 @@
   .nav-btm {
     @apply text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold;
   }
+
+  .paragraph-container {
+    @apply text-center flex flex-col justify-center items-center
+  }
+
+  .paragraph-xm {
+    @apply mb-2 text-center bg-clip-text  text-transparent 
+    bg-gradient-to-r from-purple-400 to-white w-fit;
+  }
   .paragraph {
-    @apply my-8 text-center ;
+    @apply my-8 text-center 
   }
 
   .logo-container {
@@ -75,7 +84,7 @@
   }
 
   .project-container-xm {
-    @apply mx-2 text-lg;
+    @apply mx-2 text-lg duration-1000;
 
   }
   .project-content {
