@@ -12,12 +12,13 @@ import nodejs from "../../public/nodejs.svg";
 import rt from "../../public/react.svg";
 import stockChart from "../../public/stock-chart.svg";
 import Layout from "./layout";
+import Link from "next/link";
 
 function Home() {
-    const { ref: project1, inView: project1InView } = useInView({
-        threshold: 0.4,
-        triggerOnce: false,
-      });
+  const { ref: project1, inView: project1InView } = useInView({
+    threshold: 0.4,
+    triggerOnce: false,
+  });
   return (
     <>
       {" "}
@@ -32,9 +33,9 @@ function Home() {
       >
         <div
           className="    
-        xm:hidden "
+        xm:hidden"
         >
-          <Image priority={true} className="w-full   " src={me} alt="" />
+          <Image priority={true} className="  " src={me} alt="" />
         </div>
 
         <div
@@ -42,10 +43,10 @@ function Home() {
          flex justify-center items-center
         xm:hidden"
         >
-          <div className=" h-auto mr-5 bg-clip-text font-extrabold text-transparent bg-gradient-to-r from-blue-300 to-purple-500">
-            <p className="paragraph text-2xl font-bold">Welcome! My name is</p>
-            <p className="paragraph py-3 text-8xl "> Jack Tang </p>
-            <p className="paragraph text-2xl font-bold">
+          <div className=" h-auto w-auto mr-5 bg-clip-text font-extrabold text-transparent bg-gradient-to-r from-blue-300 to-purple-500">
+            <p className="paragraph text-2xl mm:text-2xl ">Welcome! My name is</p>
+            <p className="paragraph py-2  text-7xl mm:text-4xl font-bold"> Jack Tang </p>
+            <p className="paragraph text-2xl mm:text-2xl ">
               If you&apos;re hiring a junior front-end developer, get in touch!
             </p>
           </div>
@@ -53,7 +54,7 @@ function Home() {
 
         <div
           className=" content-center relative 
-        sm:hidden"
+        sm:hidden "
         >
           <div
             className="absolute top-[70%] 
@@ -69,80 +70,88 @@ function Home() {
           <Image className="w-full" src={me} alt={""} />
         </div>
       </div>
-      <div className="w-auto h-auto bg-neutral-800">
+      <div className="w-auto h-auto bg-neutral-800 sm:px-20 ">
         <p className="w-full text-center text-3xl py-6">My Skills</p>
         <div
-          className="grid grid-cols-4    h-full 
+          className="grid grid-cols-5  mm:grid-cols-4  h-full 
          sm:gap-10
         xm:m-2 xm:gap-2 xm:grid-cols-3"
         >
           <div
             className="
             border-yellow-300 
-          sm:logo-container 
-          xm:logo-container-xm"
+          sm:skill-container
+          xm:skill-container-xm"
           >
             <a
-              className=""
+              className="sm:logo-container-sm xm:logo-container-xm"
               title="Javascript"
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             >
-              <Image className="logo" src={js} alt="" />
+              <Image className="logo-image" src={js} alt="" />
 
-              <p className="mt-2 text-lg">Javascript</p>
+              <p className="text-lg">Javascript</p>
             </a>
           </div>
 
           <div
             className=" border-blue-600 
-            sm:logo-container
-          xm:logo-container-xm"
+            sm:skill-container
+          xm:skill-container-xm"
           >
             <a
-              className=""
+              className="sm:logo-container-sm xm:logo-container-xm"
               title="Javascript"
               href="https://www.typescriptlang.org/"
             >
-              <Image className="logo" src={ts} alt="" />
+              <Image className="logo-image" src={ts} alt="" />
 
-              <p className="mt-2 text-lg">Typescript</p>
+              <p className=" text-lg">Typescript</p>
             </a>
           </div>
           <div
             className=" border-blue-500 
-            sm:logo-container
-          xm:logo-container-xm"
+            sm:skill-container
+          xm:skill-container-xm"
           >
-            <a className="" title="CSS" href="https://www.typescriptlang.org/">
-              <Image className="logo" src={css} alt="" />
+            <a
+              className="sm:logo-container-sm xm:logo-container-xm"
+              title="CSS"
+              href="https://www.typescriptlang.org/"
+            >
+              <Image className="logo-image" src={css} alt="" />
 
-              <p className="mt-2 text-lg">CSS</p>
+              <p className="text-lg">CSS</p>
             </a>
           </div>
           <div
             className=" border-orange-500 
-           sm:logo-container
-          xm:logo-container-xm"
+           sm:skill-container
+          xm:skill-container-xm"
           >
             <a
-              className=""
+              className="sm:logo-container-sm xm:logo-container-xm"
               title="HTML5"
-              href="https://www.typescriptlang.org/"
+              href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
             >
-              <Image className="logo" src={html} alt="" />
+              <Image className="logo-image" src={html} alt="" />
 
-              <p className="mt-2 text-lg">HTML5</p>
+              <p className="text-lg">HTML5</p>
             </a>
           </div>
           <div
             className="border-cyan-500 
-            sm:logo-container 
-          xm:logo-container-xm"
+            sm:skill-container
+          xm:skill-container-xm"
           >
-            <a className="" title="Tailwindcss" href="https://tailwindcss.com/">
-              <Image className="logo" src={tw} alt="" />
+            <a
+              className="sm:logo-container-sm xm:logo-container-xm"
+              title="Tailwindcss"
+              href="https://tailwindcss.com/"
+            >
+              <Image className="logo-image" src={tw} alt="" />
 
-              <p className="mt-2 text-lg">Tailwindcss</p>
+              <p className="  text-lg">Tailwindcss</p>
             </a>
           </div>
 
@@ -150,45 +159,57 @@ function Home() {
             // before:magic-layer1 before:from-cyan-300 before:to-white after:magic-layer2
             // after:from-blue-500 after:to-white
             //   sm:special-logo-container
-            //   xm:special-logo-container-xm
+            //   xm:special-skill-container-xm
             className=" 
             border-blue-400
-          sm:logo-container 
-          xm:logo-container-xm"
+          sm:skill-container
+          xm:skill-container-xm"
           >
             <a
               // sm:magic-cover
               // xm:magic-cover-xm
-              className=" "
+              className=" sm:logo-container-sm xm:logo-container-xm"
               title="React"
               href="https://react.dev/"
             >
-              <Image className="logo hover:animate-spin" src={rt} alt="" />
-              <p className="mt-2 text-lg">React</p>
+              <Image
+                className="logo-image hover:animate-spin"
+                src={rt}
+                alt=""
+              />
+              <p className=" text-lg">React</p>
             </a>
           </div>
           <div
             className="
            border-green-700 brightness-150
-           sm:logo-container
-          xm:logo-container-xm"
+           sm:skill-container
+          xm:skill-container-xm"
           >
-            <a className="" title="Nodejs" href="https://nodejs.org/en">
-              <Image className="logo" src={nodejs} alt="" />
+            <a
+              className="sm:logo-container-sm xm:logo-container-xm"
+              title="Nodejs"
+              href="https://nodejs.org/en"
+            >
+              <Image className="logo-image" src={nodejs} alt="" />
 
-              <p className="mt-2 text-lg">Nodejs</p>
+              <p className=" text-lg">Nodejs</p>
             </a>
           </div>
 
           <div
             className="border-red-500 
-            sm:logo-container 
-          xm:logo-container-xm"
+            sm:skill-container
+            xm:skill-container-xm"
           >
-            <a className="" title="Git" href="https://git-scm.com/">
-              <Image className="logo" src={git} alt="" />
+            <a
+              className="sm:logo-container-sm xm:logo-container-xm"
+              title="Git"
+              href="https://git-scm.com/"
+            >
+              <Image className="logo-image " src={git} alt="" />
 
-              <p className="mt-2 text-lg">Git</p>
+              <p className="  text-lg">Git</p>
             </a>
           </div>
         </div>
@@ -219,6 +240,9 @@ function Home() {
               <a className="project-demo" href="">
                 Demo
               </a>
+              <Link className="project-demo" href="/stockChart">
+                About
+              </Link>
             </div>
           </div>
           <div className="project-image" onClick={() => {}}>
@@ -230,4 +254,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

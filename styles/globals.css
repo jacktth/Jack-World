@@ -8,7 +8,7 @@
   }
 
   .paragraph-container {
-    @apply text-center flex flex-col justify-center items-center
+    @apply text-center flex flex-col justify-center items-center self-center w-full
   }
 
   .paragraph-xm {
@@ -16,21 +16,29 @@
     bg-gradient-to-r from-purple-400 to-white w-fit;
   }
   .paragraph {
-    @apply my-8 text-center 
+    @apply my-8 mm:my-6 text-center 
   }
 
-  .logo-container {
-    @apply py-9 col-span-1 border-x-2 border-b-4 rounded text-center flex items-center justify-center drop-shadow-lg;
+  .skill-container {
+    @apply py-9 col-span-1 border-x-2 border-b-4 rounded text-center block drop-shadow-lg;
+  }
+
+  .skill-container-xm {
+    @apply py-1 col-span-1 border-x-2 border-b-4 rounded text-center   ;
+  }
+
+  .logo-container-sm {
+    @apply flex flex-col  h-40 justify-around;
   }
 
   .logo-container-xm {
-    @apply py-1 col-span-1 border-x-2 border-b-4 rounded text-center flex items-center justify-center drop-shadow-lg;
+    @apply flex flex-col  h-48 justify-around;
   }
 
-  .logo {
-    @apply px-1 flex w-full h-20;
+  .logo-image {
+    @apply w-28 mt-4 pb-[4%]
   }
-  .special-logo-container {
+  .special-skill-container{
     @apply  col-span-1 rounded text-center flex  drop-shadow-lg bg-transparent overflow-hidden;
   }
 
