@@ -11,12 +11,9 @@ import {
   SiNestjs,
   SiSupabase,
 } from "react-icons/si";
-import { Head } from "next/document";
-import Layout from "../home/layout";
 function StockChart() {
   return (
     <>
-      {/* <Layout /> */}
       <div
         className="pb-10 grid bg-white  
       sm:grid-cols-5  sm:px-5 sm:gap-2
@@ -31,12 +28,20 @@ function StockChart() {
           <p>Stock Chart</p>
           <p>A single page web application for user to collect stock data</p>
           <div className="flex my-4 justify-center">
-            <a className="project-source  " href="">
-              Source Code
-            </a>
-            <a className="project-demo" href="">
-              Demo
-            </a>
+          <Link
+                target="_blank"
+                className="project-source  "
+                href="https://github.com/jacktth/stock_chart"
+              >
+                Source Code
+              </Link>
+              <Link
+                target="_blank"
+                className="project-demo"
+                href="https://stock-chart.onrender.com"
+              >
+                Demo
+              </Link>
           </div>
         </div>
         <Image
