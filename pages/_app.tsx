@@ -1,30 +1,31 @@
 import "@/styles/globals.css";
 import { NextUIProvider, createTheme } from "@nextui-org/react";
 import type { AppProps } from "next/app";
-import { useSSR } from '@nextui-org/react'
+import { useSSR } from "@nextui-org/react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const { isBrowser } = useSSR()
+  const { isBrowser } = useSSR();
   const myDarkTheme = createTheme({
-    type: 'dark',
+    type: "dark",
     theme: {
       colors: {
         // brand colors
-        background: '#343434',
-        text: '#fff',
+        background: "#343434",
+        text: "#fff",
         // you can also create your own color
-        myDarkColor: 'black'
+        myDarkColor: "black",
         // ...  more colors
       },
       space: {},
-      fonts: {}
-    }
-  })
-  return(
+      fonts: {},
+    },
+  });
+  return (
     isBrowser && (
-      <NextUIProvider theme={myDarkTheme} >
+      <NextUIProvider theme={myDarkTheme}>
         <Component {...pageProps} />
       </NextUIProvider>
-    )
-  )
+    ) && <Analytics />
+  );
 }

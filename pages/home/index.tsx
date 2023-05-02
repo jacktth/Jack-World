@@ -13,19 +13,28 @@ import rt from "../../public/react.svg";
 import stockChart from "../../public/stock-chart.svg";
 import Layout from "./layout";
 import Link from "next/link";
-
+import {
+  SiReactquery,
+  SiReact,
+  SiRedux,
+  SiNestjs,
+  SiSupabase,
+} from "react-icons/si";
+import { useRef } from "react";
 function Home() {
   const { ref: project1, inView: project1InView } = useInView({
     threshold: 0.4,
     triggerOnce: false,
   });
+  const projectField = useRef<null | HTMLDivElement>(null);
+
   return (
     <>
       {" "}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Layout />
+      <Layout {...projectField} />
       <div
         className="grid gap-20 grid-cols-2  h-auto
         sm:mx-20 
@@ -44,8 +53,13 @@ function Home() {
         xm:hidden"
         >
           <div className=" h-auto w-auto mr-5 bg-clip-text font-extrabold text-transparent bg-gradient-to-r from-blue-300 to-purple-500">
-            <p className="paragraph text-2xl mm:text-2xl ">Welcome! My name is</p>
-            <p className="paragraph py-2  text-7xl mm:text-4xl font-bold"> Jack Tang </p>
+            <p className="paragraph text-2xl mm:text-2xl ">
+              Welcome! My name is
+            </p>
+            <p className="paragraph py-2  text-7xl mm:text-4xl font-bold">
+              {" "}
+              Jack Tang{" "}
+            </p>
             <p className="paragraph text-2xl mm:text-2xl ">
               If you&apos;re hiring a junior front-end developer, get in touch!
             </p>
@@ -219,6 +233,7 @@ function Home() {
         className=" h-auto
       "
       >
+        <div ref={projectField}></div>
         <p className="w-full text-center text-3xl py-4">Projects</p>
         <div
           className={` sm:project-container
@@ -232,14 +247,48 @@ function Home() {
               main feature is for the user to save a specific range of stock
               data and use the api to retrieve all the stored data.
             </p>
-            <p>React, Typescript, Nestjs, Supabase</p>
-            <div className="flex my-4">
-              <a className="project-source  " href="">
+            <div className="text-sm  my-3">
+              <div>
+                <p>Used libraries:</p>
+              </div>
+
+              <div className="flex text-center justify-between py-1">
+                <div className="stockChartLibrary">
+                  <SiReact className="fill-blue-500 stockChartIcon" />
+                  React
+                </div>
+                <div className="stockChartLibrary">
+                  <SiReactquery className="fill-red-400 stockChartIcon" /> React Query
+                </div>
+                <div className="stockChartLibrary">
+                  <SiRedux className="fill-purple-600 stockChartIcon" />
+                  Redux ToolKit
+                </div>
+                <div className="stockChartLibrary">
+                  <SiNestjs className="fill-red-600 stockChartIcon" />
+                  Nestjs
+                </div>
+                <div className="stockChartLibrary">
+                  <SiSupabase className="fill-green-600 stockChartIcon" />
+                  Suspabase
+                </div>
+              </div>
+            </div>
+            <div className="flex my-4 items-center" ref={projectField}>
+              <Link
+                target="_blank"
+                className="project-source  "
+                href="https://github.com/jacktth/stock_chart"
+              >
                 Source Code
-              </a>
-              <a className="project-demo" href="">
+              </Link>
+              <Link
+                target="_blank"
+                className="project-demo"
+                href="https://stock-chart.onrender.com"
+              >
                 Demo
-              </a>
+              </Link>
               <Link className="project-demo" href="/stockChart">
                 About
               </Link>

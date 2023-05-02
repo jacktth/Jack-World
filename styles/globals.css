@@ -20,11 +20,11 @@
   }
 
   .skill-container {
-    @apply py-9 col-span-1 border-x-2 border-b-4 rounded text-center block drop-shadow-lg;
+    @apply mb-5 py-9 col-span-1 border-x-2 border-b-4 rounded text-center block drop-shadow-lg;
   }
 
   .skill-container-xm {
-    @apply py-1 col-span-1 border-x-2 border-b-4 rounded text-center;
+    @apply mb-5 py-1 col-span-1 border-x-2 border-b-4 rounded text-center;
   }
 
   .logo-container-sm {
@@ -32,11 +32,13 @@
   }
 
   .logo-container-xm {
-    @apply flex flex-col  h-48 justify-around;
+    @apply flex flex-col h-36 justify-around;
   }
 
   .logo-image {
-    @apply w-28 mt-4 pb-[4%];
+    @apply  mt-4 pb-[4%]
+    sm:w-28
+    xm:w-20;
   }
   .special-skill-container {
     @apply col-span-1 rounded text-center flex  drop-shadow-lg bg-transparent overflow-hidden;
@@ -100,7 +102,12 @@
   .project-image {
     @apply hover:scale-[300] hover:animate-[custom-bounce_1s_linear_infinite] col-span-2  transition-opacity duration-1000 ease-in-out;
   }
-
+  .stockChartLibrary {
+    @apply flex flex-col justify-center mr-3 
+  }
+  .stockChartIcon {
+    @apply self-center h-auto w-5
+  }
   .stockChartFeatures {
     @apply rounded bg-white text-black  
     text-center  leading-10  px-[1%] pb-5 my-10 mx-5 xm:my-5 ;
@@ -118,12 +125,16 @@
   }
 
   .motivationContainer{
-    @apply flex m-5 border-2 border-b-white
+    @apply flex m-5 border-4 border-b-white px-5
   }
   .motivationNumber{
-    @apply text-5xl mr-5 self-center
+    @apply  mr-5 self-start
+    sm:text-4xl
+    xm:text-2xl
   }
   .motivationContent{
-    @apply text-xl leading-10  tracking-wide mb-3  
+    @apply    tracking-wide mb-3  
+    sm:leading-10 sm:text-xl
+    xm:leading-7 xm:text-base
   }
 }

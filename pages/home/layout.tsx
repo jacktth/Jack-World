@@ -1,8 +1,16 @@
 import { Navbar, Link, Text, Avatar, Dropdown } from "@nextui-org/react";
+import { MutableRefObject } from "react";
 
-export default function Layout() {
+export default function Layout(projectRef: MutableRefObject<HTMLDivElement | null>) {
   const collapseItems = ["Home", "About", "Education", "Projects", "Contact"];
-
+  const scrollingToProject = () => {
+    const element = projectRef;
+    if(element.current)
+    element.current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "start"
+    })};
   return (
     <Navbar className="" isBordered variant="sticky" css={{backgroundColor: '$myDarkColor'}} >
       <Navbar.Brand>
@@ -17,11 +25,11 @@ export default function Layout() {
           jc: "center",
         }}
       >
-        <Navbar.Link href="#">Home</Navbar.Link>
+        <Navbar.Link href="/home">Home</Navbar.Link>
         <Navbar.Link isActive href="#">
           About Me
         </Navbar.Link>
-        <Navbar.Link href="#">Projects</Navbar.Link>
+        <Navbar.Link onClick={scrollingToProject}>Projects</Navbar.Link>
         <Navbar.Link href="#">Contact</Navbar.Link>
 
       </Navbar.Content>
