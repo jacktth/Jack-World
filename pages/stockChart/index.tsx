@@ -146,7 +146,7 @@ function StockChart() {
         </div>
         <div>
           <div className="flex">
-            <SiReactquery className="fill-blue-400 stockChartIcon" />
+            <SiReactquery className="fill-red-400 stockChartIcon" />
             <span>React query<span>{`(FKA React Query)`}</span></span>
           </div>
           <p>The asynchronous state management tools</p>

@@ -25,7 +25,8 @@ export default function App({ Component, pageProps }: AppProps) {
     isBrowser && (
       <NextUIProvider theme={myDarkTheme}>
         <Component {...pageProps} />
+      <Analytics />
       </NextUIProvider>
-    ) && <Analytics />
+    ) 
   );
 }
