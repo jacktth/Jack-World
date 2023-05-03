@@ -117,7 +117,7 @@
   }
 
   .stockChartFeaturesIconContainer {
-    @apply bg-blue-200 rounded-full 
+    @apply bg-blue-300 rounded-full 
     w-12 h-12 flex content-center justify-center;
   }
   .stockChartFeaturesIcon {
@@ -125,7 +125,7 @@
   }
 
   .motivationContainer{
-    @apply flex m-5 border-4 border-b-white px-5
+    @apply flex  border-b-2 border-b-white px-10
   }
   .motivationNumber{
     @apply  mr-5 self-start
@@ -137,4 +137,8 @@
     sm:leading-10 sm:text-xl
     xm:leading-7 xm:text-base
   }
+
+ .projectToolTopic {
+  @apply text-center col-span-2 border-b-2 border-b-black text-lg 
+ }
 }
