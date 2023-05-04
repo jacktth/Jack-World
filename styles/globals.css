@@ -103,7 +103,7 @@
     @apply hover:scale-[300] hover:animate-[custom-bounce_1s_linear_infinite] col-span-2  transition-opacity duration-1000 ease-in-out;
   }
   .stockChartLibrary {
-    @apply flex flex-col justify-center mr-3 
+    @apply flex flex-col justify-center 
   }
   .stockChartIcon {
     @apply self-center h-auto w-5

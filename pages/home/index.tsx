@@ -252,7 +252,7 @@ function Home() {
                 <p>Used libraries:</p>
               </div>
 
-              <div className="flex text-center justify-between py-1">
+              <div className="flex text-center justify-around py-1">
                 <div className="stockChartLibrary">
                   <SiReact className="fill-blue-500 stockChartIcon" />
                   React
