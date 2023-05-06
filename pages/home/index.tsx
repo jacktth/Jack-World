@@ -20,6 +20,7 @@ import {
   SiNestjs,
   SiSupabase,
 } from "react-icons/si";
+import { AiFillLinkedin,AiFillGithub } from "react-icons/ai";
 import { useRef } from "react";
 function Home() {
   const { ref: project1, inView: project1InView } = useInView({
@@ -27,15 +28,23 @@ function Home() {
     triggerOnce: false,
   });
   const projectField = useRef<null | HTMLDivElement>(null);
-
+  const techStackField = useRef<null | HTMLDivElement>(null);
+  const contactField = useRef<null | HTMLDivElement>(null);
+  const welcomeField = useRef<null | HTMLDivElement>(null);
   return (
     <>
       {" "}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Layout {...projectField} />
+      <Layout
+        welcomeField={welcomeField}
+        projectRef={projectField}
+        techStackField={techStackField}
+        contactField={contactField}
+      />
       <div
+      ref={welcomeField}
         className="grid gap-20 grid-cols-2  h-auto
         sm:mx-20 
       xm:grid-cols-1"
@@ -84,8 +93,11 @@ function Home() {
           <Image className="w-full" src={me} alt={""} />
         </div>
       </div>
-      <div className="w-auto h-auto bg-neutral-800 sm:px-20 ">
-        <p className="w-full text-center text-3xl py-6">My Skills</p>
+      <div
+        ref={techStackField}
+        className="w-auto h-auto bg-neutral-800 sm:px-20 "
+      >
+        <p className="w-full text-center text-3xl py-6">My Tech Stack</p>
         <div
           className="grid grid-cols-5  mm:grid-cols-4  h-full 
          sm:gap-10
@@ -258,7 +270,8 @@ function Home() {
                   React
                 </div>
                 <div className="stockChartLibrary">
-                  <SiReactquery className="fill-red-400 stockChartIcon" /> React Query
+                  <SiReactquery className="fill-red-400 stockChartIcon" /> React
+                  Query
                 </div>
                 <div className="stockChartLibrary">
                   <SiRedux className="fill-purple-600 stockChartIcon" />
@@ -289,13 +302,34 @@ function Home() {
               >
                 Demo
               </Link>
-              <Link className="project-demo" href="/stockChart">
+              <Link target="_blank" className="project-demo" href="/stockChart">
                 About
               </Link>
             </div>
           </div>
           <div className="project-image" onClick={() => {}}>
             <Image src={stockChart} alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#3a4042]" ref={contactField}>
+        <div className="w-full">
+        <p className="w-full text-center text-3xl py-4">Contact</p>
+          <div className="flex justify-center">
+            <Link
+              target="_blank"
+              className=""
+              href="https://www.linkedin.com/in/jack-tang-615427212/"
+            >
+              <AiFillLinkedin className="  fill-blue-500 text-4xl mr-2" />
+            </Link>
+            <Link
+              target="_blank"
+              className=""
+              href="https://github.com/jacktth"
+            >
+              <AiFillGithub className="  text-4xl" />
+            </Link>
           </div>
         </div>
       </div>

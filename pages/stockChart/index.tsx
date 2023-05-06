@@ -26,7 +26,10 @@ function StockChart() {
         xm:order-last xm:text-center xm:w-full xm:row-span-1"
         >
           <p className="font-bold text-lg">Stock Chart</p>
-          <p>A single page web application for user to collect stock data</p>
+          <p>
+            Stock Chart ,which is a single page web application for user to
+            collect stock data, allows user to export the restored data.
+          </p>
           <div className="flex my-4 justify-center">
             <Link
               target="_blank"
@@ -119,7 +122,7 @@ function StockChart() {
             When using some stock chart applications, reviewing the past stock
             data requires scrolling back from the most recent date, which is
             inconvenient. To address this, I would like a function that allows
-            me to save the pattern and display it in the chart with a single
+            users to save the pattern and display it in the chart with a single
             click.
           </p>
         </div>
@@ -153,7 +156,7 @@ function StockChart() {
             </div>
 
             <div className="p-2 bg-gradient-to-tl text-xl from-blue-400 to-white ">
-              <div className="text-lg">
+              <div className="text-lg mb-5">
                 <div className="flex">
                   <SiReact className="fill-blue-500 stockChartIcon " />
                   <span className="ml-1">React</span>
@@ -175,12 +178,15 @@ function StockChart() {
                 <div className="flex">
                   <SiReactquery className="fill-amber-600 stockChartIcon" />
                   <span className="ml-1">
-                    TanStack Query<span>{`(React Query)`}</span>
+                    TanStack Query
                   </span>
                 </div>
                 <p className=" text-lg">
                   The asynchronous state management tools
                 </p>
+                <ul className="list-disc ml-5 text-black">
+                <li>Handling states change between components </li>
+              </ul>
               </div>
 
               <div className="">
@@ -189,6 +195,9 @@ function StockChart() {
                   <span className="ml-1">Redux ToolKit</span>
                 </div>
                 <p className=" text-lg">The state management library</p>
+                <ul className="list-disc ml-5 text-black">
+                <li>Handling states change between components </li>
+              </ul>
               </div>
             </div>
             <div className="p-2 border-l-2 border-l-black bg-gradient-to-br from-white to-red-600 text-xl">
@@ -196,11 +205,14 @@ function StockChart() {
                 <SiNestjs className="fill-red-600 stockChartIcon" />
                 <span className="ml-1">Nestjs</span>
               </div>
-              <p className=" text-lg">The backend framework</p>
               <p className=" text-lg">
-                Handling server-side logic, including a RESTful API and
-                processing JSON data from third-party sources.
+                The backend framework
               </p>
+
+              <ul className="list-disc ml-5 text-black">
+                <li>Handling RESTful API</li>
+                <li>Processing JSON data</li>
+              </ul>
             </div>
             <div className="p-2 bg-gradient-to-br text-xl from-white to-green-400 ">
               <div className="flex">
@@ -208,16 +220,17 @@ function StockChart() {
                 <span className="ml-1">Supabase</span>
               </div>
               <p className=" text-lg">The Backend-as-a-Service platform</p>
-              <p className=" text-lg">
-                Handling user authentication and serving as a database
-              </p>
+
+              <ul className="list-disc ml-5 text-black">
+                <li>Handling user authentication</li>
+                <li>Serving as a database</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
       {/*---------------------------- This is XM style--------------------------- */}
-      
-      
+
       <div className="text-black bg-[#facf5a] p-2 sm:hidden">
         {/* parent */}
         <div className="grid   ">
@@ -230,15 +243,15 @@ function StockChart() {
               x
             </div> */}
 
-            <div className="projectToolTopic bg-gradient-to-r from-blue-200 to-purple-50">
+            <div className="projectToolTopic bg-gradient-to-r from-blue-200 to-purple-100">
               Frontend
             </div>
 
             <div className="p-2 bg-gradient-to-tl text-xl from-blue-400 to-white ">
               <div className="text-lg">
-                <div className="flex">
+                <div className="flex ">
                   <SiReact className="fill-blue-500 stockChartIcon " />
-                  <span className="ml-1">React</span>
+                  <p className="ml-1 text-lg">React</p>
                 </div>
                 <p className=" text-lg">The user interfaces library</p>
               </div>
@@ -257,12 +270,15 @@ function StockChart() {
                 <div className="flex">
                   <SiReactquery className="fill-amber-600 stockChartIcon" />
                   <span className="ml-1">
-                    TanStack Query<span>{`(React Query)`}</span>
+                    TanStack Query
                   </span>
                 </div>
                 <p className=" text-lg">
                   The asynchronous state management tools
                 </p>
+                <ul className="list-disc ml-5 text-black">
+                <li>Managing database state and caching</li>
+              </ul>
               </div>
 
               <div className="">
@@ -271,13 +287,14 @@ function StockChart() {
                   <span className="ml-1">Redux ToolKit</span>
                 </div>
                 <p className=" text-lg">The state management library</p>
+                <ul className="list-disc ml-5 text-black">
+                <li>Handling states change between components </li>
+              </ul>
               </div>
             </div>
           </div>
 
           <div className="bg-white grid grid-cols-2  w-full h-full mt-2">
-    
-
             <div className="projectToolTopic bg-gradient-to-l from-green-200 to-red-50 ">
               Backend
             </div>
@@ -288,13 +305,10 @@ function StockChart() {
                 <span className="ml-1">Nestjs</span>
               </div>
               <p className=" text-lg">The backend framework</p>
-              <p className=" ">
-                - RESTful API
-              </p>
-              <p className=" ">
-                - Processing JSON data from third-party sources.
-              </p>
-
+              <ul className="list-disc ml-5 text-black">
+                <li>Handling RESTful API</li>
+                <li>Processing JSON data</li>
+              </ul>
             </div>
             <div className="p-2 bg-gradient-to-br text-xl from-white to-green-400 ">
               <div className="flex">
@@ -302,12 +316,10 @@ function StockChart() {
                 <span className="ml-1">Supabase</span>
               </div>
               <p className=" text-lg">The Backend-as-a-Service platform</p>
-              <p className=" ">
-                - Handling user authentication
-              </p>
-              <p className=" ">
-                - Serving as a database
-              </p>
+              <ul className="list-disc ml-5 text-black">
+                <li>Handling user authentication</li>
+                <li>Serving as a database</li>
+              </ul>
             </div>
           </div>
         </div>

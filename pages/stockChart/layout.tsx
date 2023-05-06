@@ -83,7 +83,7 @@ export default function Layout(prop: homeLayoutProp) {
         }}
       >
         <Navbar.Link onClick={scrollingToWelcome}>Welcome</Navbar.Link>
-        <Navbar.Link onClick={scrollingToTechStack} >
+        <Navbar.Link onClick={scrollingToTechStack} isActive>
           My Tech Stack
         </Navbar.Link>
         <Navbar.Link onClick={scrollingToProject}>Projects</Navbar.Link>
@@ -100,7 +100,7 @@ export default function Layout(prop: homeLayoutProp) {
           <Dropdown.Item key="Welcome">
               <Link onClick={scrollingToWelcome}>Welcome</Link>
             </Dropdown.Item>
-            <Dropdown.Item key="My Tech Stack">
+            <Dropdown.Item key="Projects">
               <Link onClick={scrollingToTechStack}>My Tech Stack</Link>
             </Dropdown.Item>
             <Dropdown.Item key="Projects">
