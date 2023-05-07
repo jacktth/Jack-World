@@ -102,6 +102,15 @@
   .project-image {
     @apply hover:scale-[300] hover:animate-[custom-bounce_1s_linear_infinite] col-span-2  transition-opacity duration-1000 ease-in-out;
   }
+
+
+  .project-button-stockChart {
+    @apply font-bold text-blue-500 px-2 py-1
+     border-2 rounded-xl mr-4 border-blue-500 
+     duration-300 hover:scale-105 hover:transition-colors hover:text-white hover:bg-blue-600 
+     active:bg-blue-700 
+     focus:outline-none focus:ring focus:ring-blue-300;
+  }
   .stockChartLibrary {
     @apply flex flex-col justify-center 
   }
@@ -109,8 +118,8 @@
     @apply self-center h-auto w-5
   }
   .stockChartFeatures {
-    @apply rounded bg-white text-black  
-    text-center  leading-10  px-[1%] pb-5 my-10 mx-5 xm:my-5 ;
+    @apply rounded bg-white text-black bg-gradient-to-b  from-blue-50 to-blue-200
+    text-center  leading-10  px-[1%] pb-5 my-10 sm:mx-10 xm:mx-5 ;
   }
   .stockChartFeaturesIconPositioner {
     @apply relative bottom-3 flex justify-center;
@@ -125,7 +134,8 @@
   }
 
   .motivationContainer{
-    @apply flex  border-b-2 border-b-white px-10
+    @apply flex  border-b-2 border-b-white sm:mx-20  
+    bg-gradient-to-br  from-blue-50 to-blue-200
   }
   .motivationNumber{
     @apply  mr-5 self-start

@@ -13,7 +13,7 @@ import {
 } from "react-icons/si";
 function StockChart() {
   return (
-    <>
+    <div className="bg-white">
       <div
         className="pb-10 grid bg-white  
       sm:grid-cols-5  sm:px-5 sm:gap-2
@@ -33,14 +33,14 @@ function StockChart() {
           <div className="flex my-4 justify-center">
             <Link
               target="_blank"
-              className="project-source  "
+              className="project-button-stockChart "
               href="https://github.com/jacktth/stock_chart"
             >
               Source Code
             </Link>
             <Link
               target="_blank"
-              className="project-demo"
+              className="project-button-stockChart"
               href="https://stock-chart.onrender.com"
             >
               Demo
@@ -54,12 +54,12 @@ function StockChart() {
         />
       </div>
 
-      <div className=" bg-[#7bdff2] justify-around">
+      <div className=" bg-white justify-around sm:px-10 ">
         <p className="text-center text-4xl text-black pt-5 xm:mb-5">Features</p>
         <div
-          className="grid  gap-10  justify-around px-5 
+          className="grid gap-10 justify-around 
         sm:grid-cols-3
-        xm:grid-rows-1 xm:gap-1 xm:px-2
+        xm:grid-rows-1 xm:gap-1 
         "
         >
           <div className="stockChartFeatures ">
@@ -103,7 +103,7 @@ function StockChart() {
       </div>
 
       {/*                   Motivation                          */}
-      <div className="bg-[#f7a072] text-black ">
+      <div className="bg-white text-black ">
         <p className="text-center text-4xl py-4">My Motivations</p>
         <div className="motivationContainer">
           <p className="motivationNumber">1.</p>
@@ -136,7 +136,7 @@ function StockChart() {
           </p>
         </div>
       </div>
-      <div className="text-black bg-[#facf5a] px-5 xm:hidden">
+      <div className="text-black bg-white  px-20   xm:hidden">
         {/* parent */}
         <div className="grid   ">
           {/* --------------------child-------------------- */}
@@ -177,16 +177,14 @@ function StockChart() {
               <div className="">
                 <div className="flex">
                   <SiReactquery className="fill-amber-600 stockChartIcon" />
-                  <span className="ml-1">
-                    TanStack Query
-                  </span>
+                  <span className="ml-1">TanStack Query</span>
                 </div>
                 <p className=" text-lg">
                   The asynchronous state management tools
                 </p>
                 <ul className="list-disc ml-5 text-black">
-                <li>Handling states change between components </li>
-              </ul>
+                  <li>Handling states change between components </li>
+                </ul>
               </div>
 
               <div className="">
@@ -196,8 +194,8 @@ function StockChart() {
                 </div>
                 <p className=" text-lg">The state management library</p>
                 <ul className="list-disc ml-5 text-black">
-                <li>Handling states change between components </li>
-              </ul>
+                  <li>Handling states change between components </li>
+                </ul>
               </div>
             </div>
             <div className="p-2 border-l-2 border-l-black bg-gradient-to-br from-white to-red-600 text-xl">
@@ -205,9 +203,7 @@ function StockChart() {
                 <SiNestjs className="fill-red-600 stockChartIcon" />
                 <span className="ml-1">Nestjs</span>
               </div>
-              <p className=" text-lg">
-                The backend framework
-              </p>
+              <p className=" text-lg">The backend framework</p>
 
               <ul className="list-disc ml-5 text-black">
                 <li>Handling RESTful API</li>
@@ -229,9 +225,9 @@ function StockChart() {
           </div>
         </div>
       </div>
-      {/*---------------------------- This is XM style--------------------------- */}
+      {/*---------------------------- This is XM size--------------------------- */}
 
-      <div className="text-black bg-[#facf5a] p-2 sm:hidden">
+      <div className="text-black bg-white   sm:hidden">
         {/* parent */}
         <div className="grid   ">
           {/* --------------------child-------------------- */}
@@ -269,16 +265,14 @@ function StockChart() {
               <div className="">
                 <div className="flex">
                   <SiReactquery className="fill-amber-600 stockChartIcon" />
-                  <span className="ml-1">
-                    TanStack Query
-                  </span>
+                  <span className="ml-1">TanStack Query</span>
                 </div>
                 <p className=" text-lg">
                   The asynchronous state management tools
                 </p>
                 <ul className="list-disc ml-5 text-black">
-                <li>Managing database state and caching</li>
-              </ul>
+                  <li>Managing database state and caching</li>
+                </ul>
               </div>
 
               <div className="">
@@ -288,13 +282,13 @@ function StockChart() {
                 </div>
                 <p className=" text-lg">The state management library</p>
                 <ul className="list-disc ml-5 text-black">
-                <li>Handling states change between components </li>
-              </ul>
+                  <li>Handling states change between components </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div className="bg-white grid grid-cols-2  w-full h-full mt-2">
+          <div className="bg-white grid grid-cols-2  w-full h-full ">
             <div className="projectToolTopic bg-gradient-to-l from-green-200 to-red-50 ">
               Backend
             </div>
@@ -324,7 +318,7 @@ function StockChart() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 export default StockChart;
